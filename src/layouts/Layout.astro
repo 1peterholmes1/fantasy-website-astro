@@ -1,6 +1,7 @@
 ---
 import Nav from '@/components/Nav.astro'
 import Footer from '@/components/Footer.astro'
+import ScoreTicker from '@/components/ScoreTicker/ScoreTicker.svelte'
 interface Props {
 	title: string;
 }
@@ -19,6 +20,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<ScoreTicker />
 		<Nav />
 		<slot />
 		<Footer />

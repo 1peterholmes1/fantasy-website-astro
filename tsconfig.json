@@ -3,9 +3,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@helper/*": [
+        "src/lib/helperFunctions/*"
+      ],
       "@/*": [
         "src/*"
       ]
-    },
+    }
   }
 }

@@ -1,0 +1,17 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import AllManagers from '@/components/Managers/AllManagers.svelte'
+import { getManagers, getLeagueTeamManagers } from '@helper/managersData'
+
+const managers = await getManagers()
+const leagueTeamManagers = await getLeagueTeamManagers()
+
+---
+<Layout title="Managers - PAC-10 Fantasy Football">
+  <main>
+    <div>
+      <span class="mx-auto">All Managers</span>
+      <AllManagers managers={managers} leagueTeamManagers={leagueTeamManagers} />
+    </div>
+  </main>
+</Layout>
